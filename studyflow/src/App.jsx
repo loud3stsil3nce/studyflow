@@ -16,6 +16,7 @@ export default function App(){
           <Route path="/register" element={<RegisterPage/>} />
           <Route path="/about" element={<AboutPage/>} />
           <Route path="*" element={<NoPage/>} />
+
         </Routes>
       </BrowserRouter>
     </div>
