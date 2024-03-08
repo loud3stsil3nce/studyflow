@@ -7,6 +7,7 @@ export default function NoPage() {
         <>
         <Navbar />
         <h2>Page Not Found</h2>
+        
         </>
     )
 }

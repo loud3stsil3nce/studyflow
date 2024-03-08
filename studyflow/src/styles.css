@@ -4,6 +4,8 @@
 
 body {
   margin: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(0,212,255,1) 100%);
 }
 
 
@@ -15,6 +17,7 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  height: 100px;
 }
 
 .nav ul {
@@ -46,17 +49,73 @@ body {
   background-color: #777;
 }
 
-.loginheader {
+.logincontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration:solid;
+
+
+}
+
+
+
+
+
+.unBox {
+  height: 30px;
+
+}
+.pwBox {
+  height: 30px;
+
+}
+
+
+ .registerform {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
   align-items: center;
   justify-content: center;
   text-align: center;
 
+  text-decoration:solid;
+
+
+
+
+} 
+.registerLink {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+
 }
-.loginbox {
-  height: 500px;
-  border-style: solid;
-  border-color: green;
-  margin-top: 200px;
-  margin-left: 500px;
-  margin-right: 500px;
+
+.signInLink {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.boxContainer {
+  list-style: none;
+  text-decoration: solid;
+  justify-content: space-evenly;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(194,233,250,1) 18%, rgba(0,212,255,1) 100%);
+  width: 700px;
 }

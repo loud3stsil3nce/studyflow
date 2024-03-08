@@ -3,17 +3,17 @@ import Navbar from "../components/Navbar";
 import LoginBox from "../components/LoginBox";
 import RegisterBox from "../components/RegisterBox";
 
-export default function LoginPage() {
+
+
+
+
+export default function RegisterPage() {
     return (
         <>
         <Navbar />
-        <div className="logincontainer"> 
-        <LoginBox />
-
-
+        <div className="registercontainer"> 
+        <RegisterBox />
         </div>
-    
-
         </>
     )
 }
