@@ -1,10 +1,11 @@
 
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
-
-export default function LoginBox() {
+const LoginBox = () => {
     const [isLogin, setIsLogin] = useState(true);
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({
         email:'',
         password:'',
@@ -12,10 +13,17 @@ export default function LoginBox() {
     });
 
     const handleAuth = () => {
-        console.log("inputs", inputs);
+        if (!inputs.email || !inputs.password) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        navigate("/")
     }
 
-    return (<div className="loginbox">
+    return (
+    
+    <div className="loginbox">
 <>
         <form className="loginform">
         <div className="boxContainer">
@@ -37,3 +45,5 @@ export default function LoginBox() {
 </div>
     )
 }
+
+export default LoginBox;
