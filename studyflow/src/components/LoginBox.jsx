@@ -18,7 +18,7 @@ const LoginBox = () => {
             return;
         }
 
-        navigate("/")
+        navigate("/Productivity")
     }
 
     return (
