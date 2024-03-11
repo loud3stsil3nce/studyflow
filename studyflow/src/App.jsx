@@ -7,11 +7,14 @@ import NoPage from "./pages/NoPage"
 import PageLayout from "./Layouts/PageLayout"
 import Productivity from "./pages/Productivity"
 import Todo from "./pages/Todo"
+import Draggable from "react-draggable"
+import { List } from "@chakra-ui/react"
+
 
 export default function App(){
   return (
     <div>
-      
+      <List/>
       <BrowserRouter>
       <PageLayout>
         <Routes>

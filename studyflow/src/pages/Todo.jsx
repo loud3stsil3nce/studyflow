@@ -1,4 +1,7 @@
 import Navbar from "../components/Navbar";
+import List from "../components/List";
+import Card from "../components/Card";
+
 
 import {
 
@@ -16,6 +19,7 @@ export default function Todo() {
         <Navbar 
         />
         <h2>TODO Page</h2>
+        <List/>
         
  
         </div>
