@@ -7,14 +7,13 @@ import NoPage from "./pages/NoPage"
 import PageLayout from "./Layouts/PageLayout"
 import Productivity from "./pages/Productivity"
 import Todo from "./pages/Todo"
-import Draggable from "react-draggable"
-import { List } from "@chakra-ui/react"
-
+import Canvas from "./pages/Sketch"
+import './styles.css'
 
 export default function App(){
   return (
     <div>
-      <List/>
+      
       <BrowserRouter>
       <PageLayout>
         <Routes>
@@ -25,8 +24,9 @@ export default function App(){
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/productivity" element={<Productivity/>} /> 
           <Route path="/todo" element={<Todo/>} />
+          <Route path="/sketch" element={<Canvas/>} />
           <Route path="*" element={<NoPage/>} />
-
+        
 
         </Routes>
         </PageLayout>

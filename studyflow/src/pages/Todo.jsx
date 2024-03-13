@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar";
 import List from "../components/List";
-import Card from "../components/Card";
 
+
+
+import { Box, Flex } from "@chakra-ui/react";
 
 import {
 
@@ -9,28 +11,42 @@ import {
   } from '@chakra-ui/react'
 
 
+
 export default function Todo() {
     return (
         <>
-
-<DarkMode>
-      <GlobalStyle />
               <div className="homeContainer">
         <Navbar 
         />
-        <h2>TODO Page</h2>
-        <List/>
-        
- 
+
+       <div className="listContainer">
+          <Flex flexDirection={"row"}>
+        <Box>
+            <div>
+                <h1 className="listTitle">To-Do</h1>
+                <List/>
+            </div>
+            
+        </Box>
+        <Box>
+            <div>
+            <h1 className="listTitle">In Progress</h1>
+                <List/>
+            </div>
+            
+        </Box>
+        <Box>
+            <div>
+            <h1 className="listTitle">Completed</h1>
+                <List/>
+            </div>
+            
+        </Box>
+          </Flex>
+       </div>
+  
         </div>
-        
-    </DarkMode>
-
-
-
-
-
-
+  
         </>
     )
 }
