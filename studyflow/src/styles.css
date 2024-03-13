@@ -279,3 +279,88 @@ justify-content: center;
   text-align: center;
 }
 
+
+
+/*Sketchpad styling below*/
+body {
+  text-align: center;
+  background-color:thistle;
+}
+
+h1 {
+   background-color: blanchedalmond;
+}
+
+.welcome {
+   background-color: goldenrod;
+   font-weight:bolder;
+}
+#gameContainer {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: auto;
+   border-style: solid;
+   border-color: maroon;
+   background-color: aqua;
+   
+}
+
+.welcome {
+   border-style: solid;
+   border-color: maroon;
+   padding: 10px;
+   text-align: center;
+}
+.start {
+
+   width: 90px;
+
+}
+
+
+.start ,
+.clear {
+   border-style: solid;
+   border-color: black;
+   border-radius: 5px;
+   height: 50px;
+   margin: 10px;
+}
+
+
+.clear:hover ,
+.start:hover {
+   background-color: azure;
+}
+
+#divContainer {
+   border-style: solid;
+   border-color:greenyellow;
+   display:flex;
+   justify-content: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: auto;
+   margin-bottom: auto;
+   height: 500px; 
+   width: 500px;
+   border-radius: 2px;
+   background-color: white;
+ 
+}
+
+.row {
+   width: 100%;
+   height: 100%;
+   flex: 1; 
+   display: grid;
+}
+
+.column {
+   border: 1px solid black;
+   width: auto;
+   height: auto; 
+
+}
