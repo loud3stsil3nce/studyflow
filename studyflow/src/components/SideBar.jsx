@@ -29,7 +29,7 @@ const Sidebar = () => {
             <li className="sideBtn" ><a href="/todo">Writing</a></li>
             </GridItem> 
             <GridItem className="sidebar-row" rowSpan={1} h='100%' >
-            <li className="sideBtn" ><a href="/todo">Sketch</a></li>
+            <li className="sideBtn" ><a href="/sketch">Sketch</a></li>
             </GridItem> 
             <GridItem className="sidebar-row" rowSpan={1} h='100%' >
             <li className="sideBtn" ><a href="/login">Log Out</a></li>

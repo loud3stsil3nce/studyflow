@@ -12,14 +12,6 @@ const RegisterBox = () => {
         confirmPassword:''
     });
 
-    const handleAuth = () => {
-        if (!inputs.email || !inputs.password || !inputs.confirmPassword ) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        navigate("/")
-    }
 
     return <div className="registerbox">
 <>

@@ -12,6 +12,7 @@ import {
 export default function AboutPage() {
     return (
         <>
+        <div className="aboutContainer">
         <Navbar />
         <h2>About Page</h2>
         <Accordion defaultIndex={[0]} allowMultiple>
@@ -40,12 +41,14 @@ How Do I Begin?
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionPanel pb={4}>
+    <AccordionPanel pb={4} className="aboutLink">
       No, you don't need a credit card, or go through several hoops to use STUDYFLOW. All you 
       need is an email and a password! Click on the button below to get started.
+      <button ><li><a href="/auth">Sign Up or Log In</a></li></button>
     </AccordionPanel>
   </AccordionItem>
 </Accordion>
+</div>
         </>
     )
 }
