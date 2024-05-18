@@ -14,7 +14,7 @@ export default function AboutPage() {
         <>
         <div className="aboutContainer">
         <Navbar />
-        <h2>About Page</h2>
+        <h2>About Page!</h2>
         <Accordion defaultIndex={[0]} allowMultiple>
   <AccordionItem>
     <h2>
