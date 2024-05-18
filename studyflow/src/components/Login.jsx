@@ -1,5 +1,5 @@
 import { Input, NumberInputStepper } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 
@@ -13,6 +13,7 @@ const Login = () => {
 
         });
     return (<>
+            <form action="POST">
             <input className="unBox" placeholder="email" type='email' value={inputs.email} 
             onChange={(e) => setInputs({...inputs,email:e.target.value})}></input>
            
@@ -20,7 +21,8 @@ const Login = () => {
             onChange={(e) => setInputs({...inputs,password:e.target.value})}></input>
 
 
-            <button className="submit signIn" >Sign In</button>
+            <button className="submit signIn" >SiGgn In</button>    
+            </form>
     </>)
 
 }
