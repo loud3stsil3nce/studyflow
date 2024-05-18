@@ -1,0 +1,43 @@
+---
+name: Build and deploy app to cloudfront.
+on: 
+  push:
+    branches: [ main ]
+jobs:
+  build-and-deploy:
+  name: Build and Deploy
+  runs-on: ubuntu-latest
+  env:
+    BUCKET: www.stoodyus.io.s3-website.us-east-2.amazonaws.com
+    DIST: build
+    REGION: us-east-2
+    DIST_ID: E2D8EKCGIR0QE3
+
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+
+  - name: Configure AWS Credentials
+    uses: aws-actions/configure-aws-credentials@v1
+    with:
+      aws-access-key-id: AKIA4MTWMAW4KK7YFU56
+      aws-secret-access-key: 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
+      aws-region: 
+
+  - name: Install Dependencies
+    run: |
+      node --version
+      npm ci --production
+
+  - name: Build Static Website
+    run: npm run build
+
+  - name: Copy files to the production website with the AWS CLI
+    run: |
+      aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
+
+  - name: Copy files to the production website with the AWS CLI
+    run: |
+      aws cloudfront create-invalidation \
+        --distribution-id ${{ env.DIST_ID }} \
+        --paths "/*"
