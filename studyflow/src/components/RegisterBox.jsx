@@ -25,11 +25,11 @@ const RegisterBox = () => {
                 <input className="pwBox" placeholder="confirm password" type='password' value={inputs.confirmPassword}
                 onChange={(e) => setInputs({...inputs,confirmPassword:e.target.value})}></input>
 
-                <button className="submit signIn" onClick={handleAuth}>Sign Up</button>
+                {/* <button className="submit signIn" onClick={handleAuth}>Sign Up</button>
                 <h1>Have an Account Already?</h1>
                     <a className="loginlink" href="/login">
                     Login
-                    </a>
+                    </a> */}
             </div>
 
 

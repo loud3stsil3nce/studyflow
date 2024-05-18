@@ -1,8 +1,58 @@
 const express = require('express')
+const collection=require("./mongo")
+const cors = require("cors")
 const app = express()
 const bcrypt = require('bcrypt')
 
 app.use(express.json())
+app.use(express.urlencoded({ extended: true}))
+app.use(cors())
+
+
+app.get("/auth", cors(),(req,res) => {
+
+})
+
+app.post("/auth",async(req,res)=> {
+  const{email,password}=req.body
+
+  try{
+    const check=await collection.findOne({email:email})
+    if(check){
+      res.json("exist")
+    } else {
+      res.json("doesnotexist")
+    }
+  } catch(e) {
+    res.json("notexist")
+}
+})
+
+
+
+app.post("/RegisterPage",async(req,res)=> {
+  const{email,password}=req.body
+  const datta={
+    email:email,
+    password:password
+  }
+
+  try{
+    const check=await collection.findOne({email:email})
+    if(check){
+      res.json("exist")
+    } else {
+      res.json("doesnotexist")
+      await collection.insertMany({data})
+    }
+  } catch(e) {
+    res.json("notexist")
+}
+})
+
+
+
+
 
 const users = []
 
@@ -41,4 +91,6 @@ app.post('/users/login', async (req, res) => {
 
 
 
-app.listen(3000)
+app.listen(3000, ()=>{
+  console.log("port connected");
+})

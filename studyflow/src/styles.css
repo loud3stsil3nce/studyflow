@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  
+  background-size: cover;
 }
 
 body {
@@ -62,19 +62,69 @@ body {
 
 }
 
+.registercontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration:solid;
+  background: rgb(2,0,36);
+  background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(0,212,255,1) 100%);
+}
+.bigtitle {
+  font-size: 50px;
+  height:100vh;
+  text-align: center;
+  vertical-align: middle;
+  justify-self: center;
+  padding: 20vh
+}
 
+.scrolltext {
+  font-size: 20px;
 
-
+}
+.box1 {
+  display: flex;
+  flex-direction: column;
+}
 .unBox {
-  height: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration:solid;
+
+
 
 }
 .pwBox {
-  height: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration:solid;
 
 }
 
+.authBox {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: #777;
+  margin: 5px;
+}
 
  .registerform {
   display: flex;
@@ -379,10 +429,24 @@ h1 {
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(194,233,250,1) 18%, rgba(0,212,255,1) 100%);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+
 }
 
+.infoTabs {
+  align-items: center;
+  text-align: center;
+  justify-self: center;
+  text-align: center;
+  display:grid;
+  padding: 5px;
+  font-size: 20px
+}
 .aboutContainer {
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(194,233,250,1) 18%, rgba(0,212,255,1) 100%);
   height: 100vh;
 }
+
+

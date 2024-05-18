@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
-
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
 
   DarkMode, LightMode, GlobalStyle
@@ -7,6 +8,9 @@ import {
 
 
 export default function Productivity() {
+    
+    const location=useLocation()
+    
     return (
         <>
 
@@ -15,7 +19,7 @@ export default function Productivity() {
               <div className="homeContainer">
         <Navbar 
         />
-        <h2>Home Page</h2>
+        {/* <h2>Hello {location.state.id}, welcome to the home page.</h2> */}
         
  
         </div>

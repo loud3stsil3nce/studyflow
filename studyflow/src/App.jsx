@@ -10,7 +10,7 @@ import Todo from "./pages/Todo"
 import Canvas from "./pages/Sketch"
 import './styles.css'
 import AuthPage from "./pages/AuthPage"
-
+import RegisterPage from "./pages/RegisterPage"
 export default function App(){
   return (
     <div>
@@ -21,7 +21,7 @@ export default function App(){
           <Route index element={<Home/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/auth" element={<AuthPage/>} />
-
+          <Route path="/RegisterPage" element={<RegisterPage/>} />
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/productivity" element={<Productivity/>} /> 
           <Route path="/todo" element={<Todo/>} />
